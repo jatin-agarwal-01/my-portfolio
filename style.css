@@ -866,6 +866,10 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+
     .contact-methods {
         grid-template-columns: 1fr;
     }
