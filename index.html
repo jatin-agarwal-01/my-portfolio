@@ -12,6 +12,9 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">Jatin Agarwal</div>
+                    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                        <span class="hamburger"></span>
+                    </button>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
@@ -284,5 +287,18 @@
         </div>
     </footer>
 
+        <script>
+            // Mobile nav toggle
+            document.addEventListener('DOMContentLoaded', function () {
+                const toggle = document.querySelector('.nav-toggle');
+                const menu = document.querySelector('.nav-menu');
+                if (!toggle || !menu) return;
+                toggle.addEventListener('click', function () {
+                    const expanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', String(!expanded));
+                    menu.classList.toggle('active');
+                });
+            });
+        </script>
 </body>
 </html>
