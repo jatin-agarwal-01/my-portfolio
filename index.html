@@ -21,6 +21,7 @@
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -55,9 +56,12 @@
         <div class="container">
             <h2>About Me</h2>
             <p class="about-text">
-                I'm a passionate Computer Science student with a strong interest in mobile application development using Flutter and Dart. 
-                With a foundation in problem-solving and object-oriented programming, I'm dedicated to creating clean, efficient, and user-centric solutions. 
+                I'm a passionate Computer Science student with a strong interest in mobile application development using Flutter and Dart.
+                With a foundation in problem-solving and object-oriented programming, I'm dedicated to creating clean, efficient, and user-centric solutions.
                 I continuously seek opportunities to learn new technologies and contribute to meaningful projects that make a real-world impact.
+                <br><br>
+                Driven by curiosity and consistency, I turn small wins into momentum — every certificate I earn represents a skill sharpened and a step forward. 
+                I believe in learning by doing: building, reflecting, and improving with each project and challenge.
             </p>
             <div class="highlights">
                 <div class="highlight-item">
@@ -184,6 +188,62 @@
     </section>
 
     <!-- PROJECTS SECTION -->
+    <!-- CERTIFICATES SECTION -->
+    <section id="certificates" class="section">
+        <div class="container">
+            <h2>Certificates</h2>
+            <p class="cert-intro">Each certificate represents a step in my learning journey — skills practiced, challenges completed, and momentum gained.</p>
+
+            <div class="cert-grid">
+                <div class="cert-card" data-pdf="certificates/DATAVERSE.pdf">
+                    <a class="cert-link" href="#" data-pdf="certificates/DATAVERSE.pdf">
+                        <div class="cert-thumb">📄</div>
+                        <h4>DATAVERSE</h4>
+                        <p class="cert-caption">Participation Certificate</p>
+                        <p class="cert-desc">Participated in Dataverse Hackathon — explored data tools and collaboration.</p>
+                    </a>
+                </div>
+
+                <div class="cert-card" data-pdf="certificates/ECMAScript ES6 JavaScript Tutorials.pdf">
+                    <a class="cert-link" href="#" data-pdf="certificates/ECMAScript ES6 JavaScript Tutorials.pdf">
+                        <div class="cert-thumb">📄</div>
+                        <h4>ECMAScript ES6</h4>
+                        <p class="cert-caption">JavaScript Tutorials</p>
+                        <p class="cert-desc">Learned modern JS features like arrow functions, promises, and modules.</p>
+                    </a>
+                </div>
+
+                <div class="cert-card" data-pdf="certificates/Introduction to Entity Relationship ER Modeling.pdf">
+                    <a class="cert-link" href="#" data-pdf="certificates/Introduction to Entity Relationship ER Modeling.pdf">
+                        <div class="cert-thumb">📄</div>
+                        <h4>ER Modeling</h4>
+                        <p class="cert-caption">Entity Relationship Modeling</p>
+                        <p class="cert-desc">Covered concepts of entities, relationships, and database design basics.</p>
+                    </a>
+                </div>
+
+                <div class="cert-card" data-pdf="certificates/Introduction to NoSQL databases.pdf">
+                    <a class="cert-link" href="#" data-pdf="certificates/Introduction to NoSQL databases.pdf">
+                        <div class="cert-thumb">📄</div>
+                        <h4>NoSQL Databases</h4>
+                        <p class="cert-caption">Introduction to NoSQL</p>
+                        <p class="cert-desc">Introduced to document stores, key-value pairs, and when to use NoSQL.</p>
+                    </a>
+                </div>
+
+                <div class="cert-card" data-pdf="certificates/RED HAT.pdf">
+                    <a class="cert-link" href="#" data-pdf="certificates/RED HAT.pdf">
+                        <div class="cert-thumb">📄</div>
+                        <h4>RED HAT</h4>
+                        <p class="cert-caption">Certificate</p>
+                        <p class="cert-desc">Completed Red Hat training — gained fundamentals relevant to system management.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
     <section id="projects" class="section">
         <div class="container">
             <h2>Featured Projects</h2>
@@ -211,6 +271,29 @@
 
             <div class="project-card">
                 <div class="project-header">
+                    <h3>Campus Event Management System</h3>
+                    <span class="status completed">Completed</span>
+                </div>
+                <p class="project-description">Frontend UI for a campus events platform — polished responsive pages for browsing events, registering attendees, and viewing details.</p>
+                <p class="tech">
+                    <span class="tech-badge">Static HTML</span>
+                    <span class="tech-badge">CSS</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">Responsive Design</span>
+                </p>
+                <ul class="project-features">
+                    <li>Responsive event listings and detail pages with accessible forms</li>
+                    <li>Client-side validation and smooth UI interactions</li>
+                    <li>Mobile-first layouts and adaptive navigation</li>
+                    <li>Reusable components for cards, modals, and form flows</li>
+                </ul>
+                <div class="project-links">
+                    <a href="https://github.com/jatin-agarwal-01/Campus-Event-Management-System" target="_blank" class="project-link">View on GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
                     <h3>Enhanced Calculator</h3>
                     <span class="status completed">Completed</span>
                 </div>
@@ -232,6 +315,18 @@
             </div>
         </div>
     </section>
+
+    <!-- Certificate Preview Modal / Hover preview -->
+    <div id="cert-hover" class="cert-hover" aria-hidden="true">
+        <iframe id="cert-hover-iframe" src="" frameborder="0" aria-hidden="true"></iframe>
+    </div>
+
+    <div id="cert-modal" class="cert-modal" aria-hidden="true">
+        <div class="cert-modal-inner">
+            <button id="cert-modal-close" class="cert-modal-close" aria-label="Close preview">×</button>
+            <iframe id="cert-modal-iframe" src="" frameborder="0"></iframe>
+        </div>
+    </div>
 
     <!-- CONTACT SECTION -->
     <section id="contact" class="section dark">
@@ -279,6 +374,7 @@
                     <h4>Projects</h4>
                     <a href="https://github.com/jatin-agarwal-01/EnhancedCalculator" target="_blank">Enhanced Calculator</a>
                     <a href="https://github.com/jatin-agarwal-01" target="_blank">Expense Tracker</a>
+                    <a href="https://github.com/jatin-agarwal-01/Campus-Event-Management-System" target="_blank">Campus Event Management System</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -299,6 +395,76 @@
                     menu.classList.toggle('active');
                 });
             });
+                // Certificates preview (hover and modal)
+                document.addEventListener('DOMContentLoaded', function () {
+                    const hoverBox = document.getElementById('cert-hover');
+                    const hoverIframe = document.getElementById('cert-hover-iframe');
+                    const modal = document.getElementById('cert-modal');
+                    const modalIframe = document.getElementById('cert-modal-iframe');
+                    const modalClose = document.getElementById('cert-modal-close');
+
+                    function showHover(pdf, rect) {
+                        if (!pdf) return;
+                        hoverIframe.src = encodeURI(pdf);
+                        const hoverW = hoverBox.offsetWidth || 360;
+                        const hoverH = hoverBox.offsetHeight || 220;
+                        let left = rect.right + 12;
+                        // if overflow on right, show on left
+                        if (left + hoverW > window.innerWidth - 8) {
+                            left = rect.left - hoverW - 12;
+                        }
+                        if (left < 8) left = 8;
+                        let top = rect.top;
+                        if (top + hoverH > window.innerHeight - 8) {
+                            top = window.innerHeight - hoverH - 8;
+                        }
+                        if (top < 8) top = 8;
+                        hoverBox.style.left = left + 'px';
+                        hoverBox.style.top = top + 'px';
+                        hoverBox.setAttribute('aria-hidden', 'false');
+                    }
+
+                    function hideHover() {
+                        hoverIframe.src = '';
+                        hoverBox.setAttribute('aria-hidden', 'true');
+                    }
+
+                    function openModal(pdf) {
+                        modalIframe.src = encodeURI(pdf);
+                        modal.setAttribute('aria-hidden', 'false');
+                    }
+
+                    function closeModal() {
+                        modalIframe.src = '';
+                        modal.setAttribute('aria-hidden', 'true');
+                    }
+
+                    document.querySelectorAll('.cert-card').forEach(card => {
+                        const pdf = card.getAttribute('data-pdf');
+                        card.addEventListener('mouseenter', (e) => {
+                            if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+                                const rect = card.getBoundingClientRect();
+                                showHover(pdf, rect);
+                            }
+                        });
+                        card.addEventListener('mouseleave', hideHover);
+
+                        // click opens modal
+                        card.querySelectorAll('.cert-link').forEach(link => {
+                            link.addEventListener('click', (ev) => {
+                                ev.preventDefault();
+                                openModal(link.getAttribute('data-pdf') || pdf);
+                            });
+                        });
+                    });
+
+                    // hide hover on scroll or resize
+                    window.addEventListener('scroll', hideHover, { passive: true });
+                    window.addEventListener('resize', hideHover);
+
+                    modalClose.addEventListener('click', closeModal);
+                    modal.addEventListener('click', (ev) => { if (ev.target === modal) closeModal(); });
+                });
         </script>
 </body>
 </html>
