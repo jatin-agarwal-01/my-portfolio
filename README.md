@@ -37,7 +37,13 @@ I enjoy solving real-world problems using technology and continuously improving 
 ### 📱 Daily Expense Tracker App (Ongoing)
 - Cross-platform mobile app built using Flutter  
 - Tracks daily expenses and manages budgets  
-- Real-time expense calculation and clean UI  
+- Real-time expense calculation and clean UI
+
+### 🎓 Campus Event Management System
+- Web-based system for managing college events efficiently  
+- Allows event creation, listing, and structured management  
+- Designed with a clean and organized user interface  
+- Demonstrates structured front-end development and project organization  
 
 ### 🧮 Enhanced Calculator
 - Java-based calculator using Object-Oriented Programming  
