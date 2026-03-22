@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react'
 import Typewriter from './Typewriter'
 
 export default function Hero() {
+  const profileImageUrl = `${import.meta.env.BASE_URL}profile.jpg`
+
   const scrollTo = (id) => {
     const el = document.getElementById(id)
     if (el) el.scrollIntoView({ behavior: 'smooth' })
@@ -151,7 +153,7 @@ export default function Hero() {
             </div>
             <div className="overflow-hidden rounded-[1.6rem] border border-white/10 bg-gradient-to-b from-white/5 to-transparent p-4">
               <img
-                src="/profile.jpg"
+                src={profileImageUrl}
                 alt="Jatin Agarwal"
                 className="h-auto w-full rounded-[1.25rem] object-cover"
               />
