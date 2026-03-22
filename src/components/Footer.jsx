@@ -17,11 +17,6 @@ export default function Footer() {
       icon: 'EM',
       url: 'mailto:jatinagarwal825@gmail.com',
     },
-    {
-      name: 'Resume Contact',
-      icon: 'CV',
-      url: 'mailto:jatinagarwal825@gmail.com',
-    },
   ]
 
   return (
