@@ -1,47 +1,93 @@
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
+const certiBase = `${import.meta.env.BASE_URL}certi/`
+
+const certi = (fileName) => `${certiBase}${fileName}`
+
 const certificates = [
   {
     name: 'AWS Certified Cloud Practitioner',
     issuer: 'Amazon Web Services',
     date: '2026',
-    link: '/certi/AWS Certified Cloud Practitioner certificate.pdf',
+    link: certi('AWS Certified Cloud Practitioner certificate.pdf'),
+    category: 'Cloud',
+  },
+  {
+    name: 'AWS Certified Data Engineer - Associate',
+    issuer: 'Amazon Web Services',
+    date: '',
+    link: certi('AWS Certified Data Engineer - Associate certificate.pdf'),
     category: 'Cloud',
   },
   {
     name: 'DATAVERSE Participation Certificate',
     issuer: 'Dataverse Hackathon',
     date: '',
-    link: '/certi/DATAVERSE.pdf',
+    link: certi('DATAVERSE.pdf'),
     category: 'Hackathon',
   },
   {
     name: 'ECMAScript ES6 JavaScript Tutorials',
     issuer: 'Online',
     date: '',
-    link: '/certi/ECMAScript ES6 JavaScript Tutorials.pdf',
+    link: certi('ECMAScript ES6 JavaScript Tutorials.pdf'),
     category: 'JavaScript',
+  },
+  {
+    name: 'Dart Programming',
+    issuer: 'Online',
+    date: '',
+    link: certi('Dart Programming.pdf'),
+    category: 'Mobile',
+  },
+  {
+    name: 'Learning Django Web Development',
+    issuer: 'Online',
+    date: '',
+    link: certi('Learning Django Web Development.pdf'),
+    category: 'Backend',
+  },
+  {
+    name: 'Learning Flask',
+    issuer: 'Online',
+    date: '',
+    link: certi('Learning Flask.pdf'),
+    category: 'Backend',
   },
   {
     name: 'ER Modeling Entity Relationship Modeling',
     issuer: 'Online',
     date: '',
-    link: '/certi/Introduction to Entity Relationship ER Modeling.pdf',
+    link: certi('Introduction to Entity Relationship ER Modeling.pdf'),
     category: 'Data Modeling',
   },
   {
     name: 'NoSQL Databases Introduction to NoSQL',
     issuer: 'Online',
     date: '',
-    link: '/certi/Introduction to NoSQL databases.pdf',
+    link: certi('Introduction to NoSQL databases.pdf'),
     category: 'Databases',
+  },
+  {
+    name: 'Networking Essentials',
+    issuer: 'Online',
+    date: '',
+    link: certi('Networking Essentials (1).pdf'),
+    category: 'Networking',
+  },
+  {
+    name: 'RealWorld Projects with Flutter',
+    issuer: 'Online',
+    date: '',
+    link: certi('RealWorld Projects with Flutter.pdf'),
+    category: 'Mobile',
   },
   {
     name: 'RED HAT Certificate',
     issuer: 'Red Hat',
     date: '',
-    link: '/certi/RED HAT.pdf',
+    link: certi('RED HAT.pdf'),
     category: 'Systems',
   },
 ]
@@ -55,6 +101,8 @@ export default function Certificates() {
       if (e.key === 'Escape') setOpen(false)
     }
     if (open) document.addEventListener('keydown', onKey)
+    document.body.classList.toggle('certificate-modal-open', open)
+    document.body.style.overflow = open ? 'hidden' : ''
     return () => document.removeEventListener('keydown', onKey)
   }, [open])
 
@@ -127,7 +175,7 @@ export default function Certificates() {
         initial={{ opacity: 0 }}
         animate={{ opacity: open ? 1 : 0 }}
         transition={{ duration: 0.3 }}
-        className={`fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm ${
+        className={`fixed inset-0 z-[120] flex items-center justify-center overflow-y-auto bg-black/80 px-4 py-6 backdrop-blur-sm ${
           open ? 'pointer-events-auto' : 'pointer-events-none'
         }`}
         onClick={() => setOpen(false)}
